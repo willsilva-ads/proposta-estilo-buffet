@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Parceria Estratégica Completa: Estilo Buffet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #060608;
+            --text-color: #e0e0e6;
+            --orange: #ff5e00; /* Energia Vibrante */
+            --orange-glow: rgba(255, 94, 0, 0.25);
+            --blue: #00d2ff;   /* Confiança Vibrante */
+            --blue-glow: rgba(0, 210, 255, 0.25);
+            --card-bg: #111116;
+            --border-color: rgba(0, 210, 255, 0.15);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 60px 20px;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(255, 94, 0, 0.08), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(0, 210, 255, 0.08), transparent 40%);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8), 0 0 40px var(--blue-glow), inset 0 1px 0 rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--orange), var(--blue));
+            box-shadow: 0 0 20px var(--orange-glow);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: pulseLogo 3s infinite alternate;
+        }
+
+        .logo-container img {
+            max-width: 220px;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+        }
+
+        @keyframes pulseLogo {
+            from { transform: scale(1); filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1)); }
+            to { transform: scale(1.03); filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2)); }
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.6em;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+        
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: var(--blue);
+            font-size: 1.6em;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--orange);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--orange);
+        }
+
+        ul.main-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.main-list > li {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+            background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
+            padding: 25px 25px 25px 50px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: all 0.3s ease;
+        }
+        
+        ul.main-list > li:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 15px var(--blue-glow);
+            border-color: rgba(0, 210, 255, 0.3);
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.02) 100%);
+        }
+
+        ul.main-list > li::before {
+            content: '✦';
+            color: var(--orange);
+            position: absolute;
+            left: 20px;
+            font-size: 1.4em;
+            top: 22px;
+            text-shadow: 0 0 10px var(--orange);
+        }
+
+        ul.sub-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        ul.sub-list > li {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+            color: #b0b0bb;
+            line-height: 1.5;
+        }
+
+        ul.sub-list > li::before {
+            content: '→';
+            color: var(--blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            text-shadow: 0 0 8px var(--blue);
+        }
+
+        strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .quote {
+            margin-top: 70px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(255, 94, 0, 0.1));
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .quote:hover {
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.5), 0 0 20px var(--orange-glow);
+            border-color: rgba(255, 94, 0, 0.3);
+        }
+
+        .quote p {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.3em;
+            color: #ffffff;
+            text-align: center;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote::before, .quote::after {
+            content: '"';
+            font-size: 5em;
+            color: rgba(255,255,255,0.05);
+            position: absolute;
+            font-family: Georgia, serif;
+            line-height: 0;
+            z-index: 0;
+        }
+
+        .quote::before { top: 30px; left: 20px; }
+        .quote::after { bottom: -10px; right: 20px; }
+
+        .value-highlight {
+            color: var(--orange);
+            font-weight: 800;
+            text-shadow: 0 0 10px var(--orange-glow);
+        }
+
+        .percentage {
+            display: inline-block;
+            background: var(--blue-glow);
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            margin-left: 8px;
+            border: 1px solid rgba(0, 210, 255, 0.4);
+            font-weight: 700;
+            box-shadow: 0 0 10px var(--blue-glow);
+        }
+        
+        .sazonal-tag {
+            background: rgba(255, 94, 0, 0.15);
+            color: var(--orange);
+            border: 1px solid var(--orange);
+            box-shadow: 0 0 10px var(--orange-glow);
+        }
+        
+        .thanks-section {
+            text-align: center;
+            margin-top: 70px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            animation: fadeIn 2s ease-in;
+        }
+
+        .thanks-section h2 {
+            justify-content: center;
+            font-size: 3em;
+            color: var(--orange);
+            text-shadow: 0 0 20px var(--orange-glow);
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .thanks-section h2::before {
+            display: none;
+        }
+
+        .thanks-section p {
+            font-size: 1.2em;
+            color: var(--blue);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Box das 100 Palavras-chave */
+        .keywords-container {
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .keyword-tag {
+            background: rgba(0, 210, 255, 0.05);
+            color: #b0b0bb;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            transition: all 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+
+        .keyword-tag:hover {
+            background: rgba(255, 94, 0, 0.2);
+            border-color: var(--orange);
+            color: #fff;
+            transform: scale(1.05);
+            cursor: default;
+        }
+        
+        .keyword-tag.dezembro {
+            border-color: rgba(255, 94, 0, 0.3);
+            color: #d8b8a5;
+        }
+        
+        /* Custom Scrollbar */
+        .keywords-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .keywords-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+        }
+        .keywords-container::-webkit-scrollbar-thumb {
+            background: rgba(0, 210, 255, 0.3);
+            border-radius: 4px;
+        }
+        .keywords-container::-webkit-scrollbar-thumb:hover {
+            background: var(--blue);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 40px 20px; }
+            h1 { font-size: 2em; }
+            body { padding: 20px 10px; }
+            .quote { padding: 30px 20px; }
+            .quote::before, .quote::after { font-size: 3em; }
+            .thanks-section h2 { font-size: 2.2em; }
+            .keywords-container { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo WILL SILVA DESIGNER E ADS.png" alt="Will Silva Designer e Ads">
+        </div>
+
+        <h1>
+            <span>Estratégia Omnichannel Integrada</span>
+            Estilo Buffet: Meta + Google Ads
+        </h1>
+
+        <h2>1. Visão Geral da Estratégia 360º</h2>
+        <ul class="main-list">
+            <li>
+                <strong>Meta Ads (Instagram e Facebook):</strong> Geração de Desejo. 
+                <ul class="sub-list">
+                    <li>Campanhas focadas em distribuir vídeos e fotos incríveis dos eventos, despertando o desejo nas noivas e debutantes em <strong>Piracicaba</strong>. É aqui que construímos o "sonho".</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Google Ads (Rede de Pesquisa):</strong> Captura de Demanda.
+                <ul class="sub-list">
+                    <li>Vamos pescar quem já está com o cartão na mão. O cliente digita "buffet para casamento em piracicaba" e nós aparecemos no topo.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>A Sinergia Perfeita:</strong> Quem vê o Instagram do buffet e decide pesquisar no Google, encontra o site de vocês. Quem pesquisa no Google, passa a ser impactado por anúncios lindos no Instagram (Remarketing).
+            </li>
+        </ul>
+
+        <h2>2. Planejamento Financeiro Consolidado</h2>
+        <p style="margin-bottom: 25px; color: #a0a0ab;">Como as campanhas do Google Ads serão focadas <strong>exclusivamente na região de Piracicaba</strong> e em termos cirúrgicos, ajustamos o orçamento para não haver desperdício:</p>
+        <ul class="main-list">
+            <li>
+                <strong>Verba de Mídia (Meta Ads): <span class="value-highlight">R$ 1.200,00</span></strong>
+                <ul class="sub-list">
+                    <li>Orçamento ideal para alcançar a grande maioria do público qualificado da cidade todos os dias.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Verba de Mídia (Google Ads): <span class="value-highlight">R$ 800,00</span></strong>
+                <ul class="sub-list">
+                    <li>Orçamento enxuto e direto ao ponto, suficiente para dominar as pesquisas locais de alta intenção em Piracicaba.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Gestão Especializada (Meta + Google): <span class="value-highlight">R$ 1.500,00</span></strong>
+                <ul class="sub-list">
+                    <li>Honorários unificados para a estruturação, otimização e controle avançado <strong>das duas plataformas simultaneamente</strong>.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Custo Total Mensal: <span class="value-highlight" style="color: var(--blue); font-size: 1.1em; text-shadow: 0 0 15px var(--blue-glow);">R$ 3.500,00</span></strong>
+            </li>
+        </ul>
+
+        <h2>3. O Poder da Estruturação e da Sazonalidade</h2>
+        <p style="margin-bottom: 10px; color: #a0a0ab;">A estratégia de captação será dividida com planejamento cirúrgico:</p>
+        
+        <ul class="main-list" style="margin-bottom: 30px;">
+            <li>
+                <strong>Casamentos Premium & 15 Anos <span class="percentage">Foco Contínuo (Ano Todo)</span></strong>
+                <ul class="sub-list">
+                    <li>Campanhas ativas constantemente, rodando a verba para captar noivas e famílias que estão no longo processo de decisão e planejamento de grandes festas.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Eventos Corporativos <span class="percentage sazonal-tag">Estratégia Exclusiva de Dezembro</span></strong>
+                <ul class="sub-list">
+                    <li>Em dezembro, viramos a chave e ativamos campanhas agressivas direcionadas exclusivamente para <strong>confraternizações de empresas e festas de fim de ano corporativas</strong>.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p style="margin-bottom: 10px; color: #a0a0ab;">Abaixo, listamos as <strong>100 palavras-chave estratégicas</strong> mapeadas para o Google Ads, englobando as buscas de Casamento, 15 Anos, Festas e o planejamento de Dezembro:</p>
+        
+        <div class="keywords-container">
+            <!-- Casamento -->
+            <span class="keyword-tag" title="buffet casamento piracicaba">buffet casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet para casamento em piracicaba">buffet para casamento em piracicaba</span>
+            <span class="keyword-tag" title="salão de festa casamento piracicaba">salão de festa casamento piracicaba</span>
+            <span class="keyword-tag" title="espaço para casamento piracicaba">espaço para casamento piracicaba</span>
+            <span class="keyword-tag" title="chácara para casamento piracicaba">chácara para casamento piracicaba</span>
+            <span class="keyword-tag" title="onde casar em piracicaba">onde casar em piracicaba</span>
+            <span class="keyword-tag" title="melhor buffet casamento piracicaba">melhor buffet casamento piracicaba</span>
+            <span class="keyword-tag" title="orçamento buffet casamento piracicaba">orçamento buffet casamento piracicaba</span>
+            <span class="keyword-tag" title="espaço sofisticado casamento piracicaba">espaço sofisticado casamento piracicaba</span>
+            <span class="keyword-tag" title="festa de casamento piracicaba">festa de casamento piracicaba</span>
+            <span class="keyword-tag" title="salão de eventos casamento piracicaba">salão de eventos casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet completo casamento piracicaba">buffet completo casamento piracicaba</span>
+            <span class="keyword-tag" title="locação espaço casamento piracicaba">locação espaço casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet para noivos piracicaba">buffet para noivos piracicaba</span>
+            <span class="keyword-tag" title="preço buffet casamento piracicaba">preço buffet casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet casamento ao ar livre piracicaba">buffet casamento ao ar livre piracicaba</span>
+            <span class="keyword-tag" title="salão climatizado casamento piracicaba">salão climatizado casamento piracicaba</span>
+            <span class="keyword-tag" title="espaço luxo casamento piracicaba">espaço luxo casamento piracicaba</span>
+            <span class="keyword-tag" title="casamento civil buffet piracicaba">casamento civil buffet piracicaba</span>
+            <span class="keyword-tag" title="recepção casamento piracicaba">recepção casamento piracicaba</span>
+            <span class="keyword-tag" title="jantar de casamento piracicaba">jantar de casamento piracicaba</span>
+            <span class="keyword-tag" title="festa de noivado piracicaba">festa de noivado piracicaba</span>
+            <span class="keyword-tag" title="espaço rústico casamento piracicaba">espaço rústico casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet de luxo piracicaba casamento">buffet de luxo piracicaba casamento</span>
+            <span class="keyword-tag" title="serviços de buffet para casamentos piracicaba">serviços de buffet para casamentos piracicaba</span>
+            <span class="keyword-tag" title="organizar casamento piracicaba">organizar casamento piracicaba</span>
+            <span class="keyword-tag" title="espaço para mini wedding piracicaba">espaço para mini wedding piracicaba</span>
+            <span class="keyword-tag" title="mini wedding buffet piracicaba">mini wedding buffet piracicaba</span>
+            <span class="keyword-tag" title="buffet para bodas piracicaba">buffet para bodas piracicaba</span>
+            <span class="keyword-tag" title="casar em piracicaba">casar em piracicaba</span>
+            <span class="keyword-tag" title="buffet casamento premium piracicaba">buffet casamento premium piracicaba</span>
+            <span class="keyword-tag" title="buffet casamento chique piracicaba">buffet casamento chique piracicaba</span>
+            <span class="keyword-tag" title="espaço casamento no campo piracicaba">espaço casamento no campo piracicaba</span>
+            <span class="keyword-tag" title="casamento intimista piracicaba">casamento intimista piracicaba</span>
+            <span class="keyword-tag" title="cardápio buffet casamento piracicaba">cardápio buffet casamento piracicaba</span>
+            <span class="keyword-tag" title="buffet para cerimônia e festa piracicaba">buffet para cerimônia e festa piracicaba</span>
+
+            <!-- 15 Anos -->
+            <span class="keyword-tag" title="buffet 15 anos piracicaba">buffet 15 anos piracicaba</span>
+            <span class="keyword-tag" title="festa de 15 anos piracicaba">festa de 15 anos piracicaba</span>
+            <span class="keyword-tag" title="salão para 15 anos piracicaba">salão para 15 anos piracicaba</span>
+            <span class="keyword-tag" title="espaço para festa de 15 anos piracicaba">espaço para festa de 15 anos piracicaba</span>
+            <span class="keyword-tag" title="melhor buffet 15 anos piracicaba">melhor buffet 15 anos piracicaba</span>
+            <span class="keyword-tag" title="orçamento festa 15 anos piracicaba">orçamento festa 15 anos piracicaba</span>
+            <span class="keyword-tag" title="buffet festa debutante piracicaba">buffet festa debutante piracicaba</span>
+            <span class="keyword-tag" title="salão debutante piracicaba">salão debutante piracicaba</span>
+            <span class="keyword-tag" title="espaço para debutantes piracicaba">espaço para debutantes piracicaba</span>
+            <span class="keyword-tag" title="festa de debutante piracicaba">festa de debutante piracicaba</span>
+            <span class="keyword-tag" title="preço buffet 15 anos piracicaba">preço buffet 15 anos piracicaba</span>
+            <span class="keyword-tag" title="organizar 15 anos piracicaba">organizar 15 anos piracicaba</span>
+            <span class="keyword-tag" title="salão com escadaria 15 anos piracicaba">salão com escadaria 15 anos piracicaba</span>
+            <span class="keyword-tag" title="buffet jovem piracicaba">buffet jovem piracicaba</span>
+            <span class="keyword-tag" title="chácara para 15 anos piracicaba">chácara para 15 anos piracicaba</span>
+            <span class="keyword-tag" title="festa 15 anos luxo piracicaba">festa 15 anos luxo piracicaba</span>
+            <span class="keyword-tag" title="espaço moderno 15 anos piracicaba">espaço moderno 15 anos piracicaba</span>
+            <span class="keyword-tag" title="buffet completo 15 anos piracicaba">buffet completo 15 anos piracicaba</span>
+            <span class="keyword-tag" title="salão de eventos 15 anos piracicaba">salão de eventos 15 anos piracicaba</span>
+            <span class="keyword-tag" title="serviços de buffet 15 anos piracicaba">serviços de buffet 15 anos piracicaba</span>
+            <span class="keyword-tag" title="festa temática 15 anos piracicaba">festa temática 15 anos piracicaba</span>
+            <span class="keyword-tag" title="onde fazer festa de 15 anos piracicaba">onde fazer festa de 15 anos piracicaba</span>
+            <span class="keyword-tag" title="buffet debutante preço piracicaba">buffet debutante preço piracicaba</span>
+            <span class="keyword-tag" title="pacote festa 15 anos piracicaba">pacote festa 15 anos piracicaba</span>
+            <span class="keyword-tag" title="local para 15 anos piracicaba">local para 15 anos piracicaba</span>
+            <span class="keyword-tag" title="festa de 15 anos inesquecível piracicaba">festa 15 anos inesquecível piracicaba</span>
+            <span class="keyword-tag" title="festa 15 anos chique piracicaba">festa 15 anos chique piracicaba</span>
+            <span class="keyword-tag" title="festa 15 anos neon piracicaba">festa 15 anos neon piracicaba</span>
+            <span class="keyword-tag" title="buffet debutante premium piracicaba">buffet debutante premium piracicaba</span>
+            <span class="keyword-tag" title="organização 15 anos piracicaba">organização 15 anos piracicaba</span>
+            <span class="keyword-tag" title="decoração e buffet 15 anos piracicaba">decoração e buffet 15 anos piracicaba</span>
+            <span class="keyword-tag" title="buffet festa teen piracicaba">buffet festa teen piracicaba</span>
+
+            <!-- Gerais / Festas -->
+            <span class="keyword-tag" title="buffet em piracicaba">buffet em piracicaba</span>
+            <span class="keyword-tag" title="melhor buffet de piracicaba">melhor buffet de piracicaba</span>
+            <span class="keyword-tag" title="salão de festas piracicaba">salão de festas piracicaba</span>
+            <span class="keyword-tag" title="aluguel salão de festas piracicaba">aluguel salão de festas piracicaba</span>
+            <span class="keyword-tag" title="espaço para eventos piracicaba">espaço para eventos piracicaba</span>
+            <span class="keyword-tag" title="locação espaço para festas piracicaba">locação espaço para festas piracicaba</span>
+            <span class="keyword-tag" title="salão para festas e eventos piracicaba">salão festas e eventos piracicaba</span>
+            <span class="keyword-tag" title="chácara para eventos piracicaba">chácara para eventos piracicaba</span>
+            <span class="keyword-tag" title="buffet completo piracicaba">buffet completo piracicaba</span>
+            <span class="keyword-tag" title="orçamento de buffet piracicaba">orçamento de buffet piracicaba</span>
+            <span class="keyword-tag" title="preço de buffet piracicaba">preço de buffet piracicaba</span>
+            <span class="keyword-tag" title="contratar buffet piracicaba">contratar buffet piracicaba</span>
+
+            <!-- Corporativo (Dezembro) -->
+            <span class="keyword-tag dezembro" title="confraternização empresa piracicaba">confraternização empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="buffet confraternização piracicaba">buffet confraternização piracicaba</span>
+            <span class="keyword-tag dezembro" title="salão para confraternização piracicaba">salão para confraternização piracicaba</span>
+            <span class="keyword-tag dezembro" title="festa de fim de ano empresa piracicaba">festa de fim de ano empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="confraternização dezembro empresa piracicaba">confraternização dezembro empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="buffet eventos corporativos piracicaba">buffet eventos corporativos piracicaba</span>
+            <span class="keyword-tag dezembro" title="espaço confraternização fim de ano piracicaba">espaço confraternização fim de ano piracicaba</span>
+            <span class="keyword-tag dezembro" title="festa da empresa dezembro piracicaba">festa da empresa dezembro piracicaba</span>
+            <span class="keyword-tag dezembro" title="jantar corporativo fim de ano piracicaba">jantar corporativo fim de ano piracicaba</span>
+            <span class="keyword-tag dezembro" title="local confraternização dezembro piracicaba">local confraternização dezembro piracicaba</span>
+            <span class="keyword-tag dezembro" title="buffet almoço confraternização piracicaba">buffet almoço confraternização piracicaba</span>
+            <span class="keyword-tag dezembro" title="aluguel salão confraternização piracicaba">aluguel salão confraternização piracicaba</span>
+            <span class="keyword-tag dezembro" title="festa de encerramento empresa piracicaba">festa de encerramento empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="coquetel confraternização empresa piracicaba">coquetel confraternização empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="festa empresarial fim de ano piracicaba">festa empresarial fim de ano piracicaba</span>
+            <span class="keyword-tag dezembro" title="melhor espaço confraternização piracicaba">melhor espaço confraternização piracicaba</span>
+            <span class="keyword-tag dezembro" title="buffet corporativo dezembro piracicaba">buffet corporativo dezembro piracicaba</span>
+            <span class="keyword-tag dezembro" title="orçamento confraternização empresa piracicaba">orçamento confraternização empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="serviços confraternização empresa piracicaba">serviços confraternização empresa piracicaba</span>
+            <span class="keyword-tag dezembro" title="buffet para festa da firma piracicaba">buffet para festa da firma piracicaba</span>
+        </div>
+
+        <h2 style="margin-top: 50px;">4. Diferenciais e Próximos Passos</h2>
+        <ul class="main-list">
+            <li>
+                <strong>Otimização e Limpeza Diária:</strong> No Google, estarei diariamente negativando e bloqueando termos ruins. No Meta, farei a atualização constante dos públicos para encontrar quem mais engaja.
+            </li>
+            <li>
+                <strong>Sinergia de Pixels:</strong> Instalaremos sistemas de rastreamento para que o Google e o Meta "conversem" entre si. Quem pesquisar no Google será imediatamente lembrado no Instagram.
+            </li>
+            <li>
+                <strong>Ação Imediata:</strong> Com a sua aprovação, iniciamos imediatamente a estruturação dessa verdadeira "máquina de atração Omnichannel".
+            </li>
+        </ul>
+
+        <div class="quote">
+            <p>"Sr. Nelson, alinhar o poder de construir sonhos no Instagram com o de pescar clientes urgentes no Google é a estratégia definitiva para dominar Piracicaba o ano todo!"</p>
+        </div>
+        
+        <div class="thanks-section">
+            <h2>Obrigado!</h2>
+            <p>Aguardamos seu retorno para darmos esse próximo passo rumo ao sucesso no Google e nas Redes Sociais.</p>
+        </div>
+    </div>
+</body>
+</html>
